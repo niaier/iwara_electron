@@ -1,6 +1,12 @@
 <!-- 组件说明 -->
 <template>
-	<div class="">Resource</div>
+	<div class="">
+		<v-row no-gutters>
+			<v-col v-for="n in 3" :key="n" cols="3">
+				<v-card class="pa-2" height="200" outlined tile></v-card>
+			</v-col>
+		</v-row>
+	</div>
 </template>
 
 <script>
