@@ -31,7 +31,8 @@ export default {
 		return {
 			menulist: [
 				['首页', 'home', 'mdi-home'],
-				['资源', 'resource', 'mdi-view-list']
+				['资源', 'resource', 'mdi-view-list'],
+				['测试', 'test', 'mdi-view-list'],
 
 			]
 		}
