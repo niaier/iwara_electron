@@ -1,6 +1,13 @@
 <!-- 组件说明 -->
 <template>
 	<div class="">
+		<div>
+			<div class="etabs-tabgroup">
+				<div class="etabs-tabs"></div>
+				<div class="etabs-buttons"></div>
+			</div>
+			<div class="etabs-views"></div>
+		</div>
 		<v-row>
 			<v-col
 				v-for="n in 4"
@@ -19,6 +26,7 @@
 
 <script>
 //import x from ''
+const TabGroup = require("electron-tabs");
 export default {
 	name: '',
 	components: {
@@ -28,6 +36,15 @@ export default {
 		return {
 
 		};
+	},
+	mounted () {
+		let tabGroup = new TabGroup();
+		// let tab = 
+		tabGroup.addTab({
+			title: "Electron",
+			src: "/rescource",
+			visible: true
+		});
 	},
 	computed: {
 
