@@ -1,9 +1,17 @@
 <!-- 组件说明 -->
 <template>
 	<div class="">
-		<v-row no-gutters>
-			<v-col v-for="n in 3" :key="n" cols="3">
-				<v-card class="pa-2" height="200" outlined tile></v-card>
+		<v-row>
+			<v-col
+				v-for="n in 4"
+				:key="n"
+				cols="3"
+				height="100px"
+				class="d-flex justify-center"
+			>
+				<v-responsive :aspect-ratio="22 / 15">
+					<v-card outlined tile width="100%" height="100%"></v-card>
+				</v-responsive>
 			</v-col>
 		</v-row>
 	</div>
