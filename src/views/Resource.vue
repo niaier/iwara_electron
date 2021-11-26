@@ -1,28 +1,34 @@
 <!-- 组件说明 -->
 <template>
 	<div class="">
+		<!-- 列表部分 START -->
+
 		<div>
-			<div class="etabs-tabgroup">
-				<div class="etabs-tabs"></div>
-				<div class="etabs-buttons"></div>
-			</div>
-			<div class="etabs-views"></div>
+			<v-row>
+				<v-col v-for="(item, index) in videoList" :key="index" cols="3">
+					<!-- class="d-flex flex-column justify-center" -->
+					<v-responsive :aspect-ratio="22 / 15">
+						<v-card
+							class="cursor-pointer"
+							outlined
+							tile
+							width="100%"
+							height="100%"
+						></v-card>
+					</v-responsive>
+					<div class="mt-3 line-clamp" :title="item.title">
+						<!-- {{ item.title }} -->
+						{{
+							index == 0
+								? "one line"
+								: "two line two line two line two line two line"
+						}}
+					</div>
+				</v-col>
+			</v-row>
 		</div>
-		<v-row>
-			<v-col
-				v-for="(item, index) in videoList"
-				:key="index"
-				cols="3"
-				class="d-flex flex-column justify-center"
-			>
-				<v-responsive :aspect-ratio="22 / 15">
-					<v-card outlined tile width="100%"></v-card>
-				</v-responsive>
-				<div class="mt-3 line-clamp" :title="item.title">
-					{{ item.title }}
-				</div>
-			</v-col>
-		</v-row>
+
+		<!-- 列表部分 END -->
 	</div>
 </template>
 
